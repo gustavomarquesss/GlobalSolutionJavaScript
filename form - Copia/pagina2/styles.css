@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./Imagens/imagemIOB-GS2.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0e8066;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+button:hover {
+    background-color: #28977f;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+
+.alert {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f44336;
+    color: #fff;
+    display: none;
+}
+
+/* Adicione este estilo para destacar visualmente o campo inválido */
+.campo-invalido {
+    border: 2px solid #f44336;
+}

@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-image: url('./imagens/dispositovoshospitalares.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#videoContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  padding: 10px 20px; /* Ajuste o padding conforme necessário para dispositivos menores */
+  font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+  background-color: #0e8066;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.5s ease-out, box-shadow 0.5s ease-out;
+  margin-bottom: 5px; /* Ajuste conforme necessário */
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background-color: #28977f;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#connectButton,
+#loadingButton {
+  position: absolute;
+  bottom: 10px; /* Ajuste conforme necessário */
+}
+
+#loadingButton {
+  display: none;
+}
+
+.loading:hover {
+  background-color: #0e8066;
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Media query para escalas maiores */
+@media (min-width: 1200px) {
+  button {
+    padding: 15px 30px;
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,78 @@
+body {
+  background-image: url('./imagens/bg site 1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "San Francisco", Arial, sans-serif;
+}
+
+.content {
+  text-align: center;
+  padding: 20px; /* Adapte o espaçamento conforme necessário */
+}
+
+/* Nova regra CSS para a imagem */
+.question-image {
+  max-width: 100%;
+  height: auto;
+  margin: -70px 0 53px 0; /* Ajuste das margens */
+}
+
+.logo-container {
+  margin-right: 10px; /* Ajuste inicial para telas maiores */
+  flex: 1; /* Faz com que o logo ocupe o espaço restante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 100%; /* Garante que a imagem do logo seja responsiva */
+  height: auto;
+  margin-top: 20px; /* Ajuste da margem superior */
+  margin-bottom: 20px; /* Ajuste da margem inferior */
+}
+
+/* Adicionando uma media query para ajustar o margin-right em telas menores */
+@media screen and (max-width: 768px) {
+  .logo-container {
+    margin-right: 5px; /* Ajuste para telas menores */
+  }
+}
+
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5%; /* Adapte a margem conforme necessário */
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 40px;
+  max-width: 200px; /* Defina o tamanho máximo desejado */
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'THICCBOI', sans-serif;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: #0e8066;
+}
+
+/* Restante do estilo permanece o mesmo */
+
+.button:hover {
+  background-color: #28977f;
+  transform: scale(1.05); /* Ajuste o valor conforme necessário */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}

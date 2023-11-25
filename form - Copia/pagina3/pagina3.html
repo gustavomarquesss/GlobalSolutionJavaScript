@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conectar Dispositivos Hospitalares</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="videoContainer">
+    <video id="videoPlayer" autoplay muted onended="onVideoEnded()">
+      <source src="./videos/videoConectarONU.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+
+  <button id="connectButton" onclick="startLoading()">Conectar Dispositivos Hospitalares</button>
+  <button id="loadingButton" class="loading" style="display:none;">Conectando...</button>
+  
+  <script src="script.js" defer></script>
+</body>
+</html>
