@@ -67,3 +67,52 @@ function monitorarSinais() {
         alerta.style.display = 'block';
     });
 }
+// Remover a seleção prévia da opção "alta" no carregamento da página
+document.addEventListener('DOMContentLoaded', function() {
+    const pressaoArterial = document.getElementById('pressaoArterial');
+    pressaoArterial.selectedIndex = -1; // Define o índice de seleção como nenhum
+});
+
+// Adicionar validação ao campo de batimentos cardíacos
+const batimentosCardiacosInput = document.getElementById('batimentosCardiacos');
+
+batimentosCardiacosInput.addEventListener('input', function() {
+    const valor = this.value.trim();
+    const valido = /^\d+$/.test(valor); // Verifica se o valor é um número
+
+    if (valido) {
+        this.classList.remove('campo-invalido');
+    } else {
+        this.classList.add('campo-invalido');
+    }
+
+    // Alterar a cor de fundo do botão Monitorar
+    atualizarCorBotao();
+});
+
+// Adicionar validação ao campo de temperatura
+const temperaturaInput = document.getElementById('temperatura');
+
+temperaturaInput.addEventListener('input', function() {
+    const valor = parseFloat(this.value.replace(',', '.')); // Substituir ',' por '.' para permitir decimais
+    const valido = !isNaN(valor) && valor >= 30 && valor <= 45;
+
+    if (valido || this.value.trim() === '') {
+        this.classList.remove('campo-invalido');
+    } else {
+        this.classList.add('campo-invalido');
+    }
+
+    // Alterar a cor de fundo do botão Monitorar
+    atualizarCorBotao();
+});
+
+// Função para atualizar a cor do botão Monitorar
+function atualizarCorBotao() {
+    const botaoMonitorar = document.querySelector('button');
+    const camposInvalidos = document.querySelectorAll('.campo-invalido');
+
+    botaoMonitorar.style.backgroundColor = camposInvalidos.length === 0 ? '#0e8066' : '#ccc'; // Cinza se houver campos inválidos
+    botaoMonitorar.disabled = camposInvalidos.length > 0;
+}
+
